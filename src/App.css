@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.navBar {
+  background-color: #61dafb;
+  margin: auto;
+  padding: 20px;
+  
+}
