@@ -22,8 +22,8 @@ Technology used to build this project.
 
 
 ## Wireframe
-<img src="./images/finddogspage.png">
 <img src="./images/wireframe.png">
+<img src="./images/finddogspage.png">
 
 
 
