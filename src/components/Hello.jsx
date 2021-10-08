@@ -5,6 +5,11 @@ function Hello() {
         <>
             <h2> Hello</h2>
             <p>Very nice to meet you! Welcome to my pet adoption website</p>
+            <p>gimmit</p>
+            <p>gimmit</p>
+            <p>gimmit</p>
+            <p>gimmit</p>
+
         </>
     )
 }
