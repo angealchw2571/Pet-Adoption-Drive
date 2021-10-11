@@ -20,9 +20,10 @@ function PetSelector(props) {
               },
             });
             const data = await response.json();
+            console.log("before", data)
             setState(data);
             setNetworkStatus("resolved");
-            console.log(data)
+            // console.log("internal", data)
           } catch (error) {
             setNetworkStatus("Item Fetch Error");
             console.log("Item data fetch fail!");

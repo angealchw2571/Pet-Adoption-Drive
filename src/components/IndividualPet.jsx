@@ -13,11 +13,10 @@ function Pets() {
   const newDataArr = [];
   const ChangeObjToArr = (e) => {
     for (const [key, value] of Object.entries(e.attributes)) {
-    console.log(`${key}: ${value}`);
+      newDataArr.push({ key, value });
     }
-  
+    console.log(newDataArr);
   };
-
 
   useEffect(() => {
     const listCities = async () => {
@@ -45,7 +44,8 @@ function Pets() {
       {networkStatus === "resolved" ? (
         <>
           <h1>hey!</h1>
-          <PetDetails state={state}/>
+          {ChangeObjToArr(state)}
+          <PetDetails state={newDataArr}/>
         </>
       ) : (
         <h1> Loading your new friend! </h1>

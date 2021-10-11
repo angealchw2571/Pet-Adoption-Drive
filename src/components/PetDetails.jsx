@@ -1,26 +1,27 @@
 import React from 'react'
 
 function PetDetails(props) {
-    console.log("props", props.state.attributes)
-    const newDataArr = [];
-    function ChangeObjToArr () {
-    for (const [key, value] of Object.entries(props.state.attributes)) {
-        console.log(key)
-    newDataArr.push({ key, value });
-    }
-    // console.log(newDataArr);
-    newDataArr.map((e, i) => {
-      return (
-      <h1>{e.key}</h1>
+    console.log("props", props.state)
+
+    const allDetails = props.state.map((element, index) => {
+      
+      return( 
+      <> 
+      <h4>{element.key} , {element.value}</h4>
+      </>
       )
     })
-  };
+
+    
+
 
 
     return (
+        <>
         <div>
-        <ChangeObjToArr/>
+        {allDetails}
         </div>
+        </>
     )
 }
 
