@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import PetDetails from "./PetDetails";
 
 function Pets() {
   const params = useParams();
@@ -10,20 +11,11 @@ function Pets() {
   const [networkStatus, setNetworkStatus] = useState("pending");
 
   const newDataArr = [];
-  const changeObjToArr = (e) => {
+  const ChangeObjToArr = (e) => {
     for (const [key, value] of Object.entries(e.attributes)) {
-    // console.log(`${key}: ${value}`);
-    newDataArr.push({ key, value });
+    console.log(`${key}: ${value}`);
     }
-    console.log(newDataArr);
-    newDataArr.map((e, i) => {
-      console.log(e.key)
-      return (
-      <>
-      <h1>{e.key}</h1>
-      </>
-      )
-    })
+  
   };
 
 
@@ -53,7 +45,7 @@ function Pets() {
       {networkStatus === "resolved" ? (
         <>
           <h1>hey!</h1>
-          {changeObjToArr(state)}
+          <PetDetails state={state}/>
         </>
       ) : (
         <h1> Loading your new friend! </h1>
