@@ -4,8 +4,6 @@ import CitySelect from "./CitySelect";
 import PetSelector from "./PetSelector";
 
 function FindPets() {
-  //   const url =
-  // "https://api.rescuegroups.org/v5/public/orgs/9491/animals/search/dogs?include=pictures,statuses,locations,videos&sort=%2Banimals.name&page=2&limit=250";
   const url2 = "https://api.rescuegroups.org/v5/public/orgs/&limit=250";
   const [state, setState] = useState([]);
   const [networkStatus, setNetworkStatus] = useState("pending");

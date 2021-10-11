@@ -1,11 +1,11 @@
 import React from 'react'
-import {useEffect, useState} from 'react'
-import PetDisplay from './PetDisplay';
+import {useParams} from 'react-router-dom'
+import {useState, useEffect } from 'react'
 
-function PetSelector(props) {
-    const searchID = props.search.id
-    console.log(searchID)
-    const url =`https://api.rescuegroups.org/v5/public/orgs/${searchID}/animals/search/dogs?include=pictures,statuses,locations,videos&sort=%2Banimals.name&page=2&limit=250`;
+function Pets() {
+    const params = useParams()
+
+    const url =`https://api.rescuegroups.org/v5/public/orgs/${params.searchID}/animals/search/dogs?include=pictures,statuses,locations,videos&sort=%2Banimals.name&page=2&limit=250`;
     const [state, setState] = useState([]);
     const [networkStatus, setNetworkStatus] = useState("pending");
 
@@ -22,28 +22,36 @@ function PetSelector(props) {
             const data = await response.json();
             setState(data);
             setNetworkStatus("resolved");
-            console.log(data)
+            console.log(data.data[0])
           } catch (error) {
             setNetworkStatus("Item Fetch Error");
             console.log("Item data fetch fail!");
           }
         };
         listCities();
-      }, [searchID]);
+      }, []);
+
+
+
+      const testing = () => {
+        for (const [key, value] of Object.entries(state.attributes)) {
+        return (<h1>`${key}: ${value}`</h1>)
+    }
+    }
 
 
     return (
         <div>
              {networkStatus === "resolved" ? (
-        <>
-            <h1> here you go!</h1>
-            <PetDisplay data={state} id={searchID}/>
-        </>
+                <>
+                <h1>hey!</h1>
+                 {testing}
+                 </>
       ) : (
-          <h1> Hello! I am {networkStatus}</h1>
+        <h1> Loading your new friend! </h1>
       )}
         </div>
     )
 }
 
-export default PetSelector
+export default Pets

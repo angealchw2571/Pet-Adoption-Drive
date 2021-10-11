@@ -5,6 +5,7 @@ import Hello from './Hello'
 import Adopt from './Adopt'
 import About from './About'
 import FindPets from './FindPets'
+import Pets from './IndividualPet'
 
 
 function Body() {
@@ -14,7 +15,8 @@ function Body() {
         <Route path="/Hello" component={Hello} />
         <Route path="/adopt" component={Adopt} />
         <Route path="/about" component={About} />
-        <Route path="/findpets" component={FindPets} />
+        <Route exact path="/findpets" component={FindPets} />
+        <Route path="/findpets/:name/:id/:i/:searchID" component={Pets} />
         </div>
     )
 }
