@@ -9,14 +9,23 @@ function Pets() {
   const [state, setState] = useState([]);
   const [networkStatus, setNetworkStatus] = useState("pending");
 
-  const testing = () => {
-    for (const [key, value] of Object.entries(state.attributes)) {
-      console.log(`${key}: ${value}`);
+  const newDataArr = [];
+  const changeObjToArr = (e) => {
+    for (const [key, value] of Object.entries(e.attributes)) {
+    // console.log(`${key}: ${value}`);
+    newDataArr.push({ key, value });
     }
-    // return (`${key}: ${value}`)
+    console.log(newDataArr);
+    newDataArr.map((e, i) => {
+      console.log(e.key)
+      return (
+      <>
+      <h1>{e.key}</h1>
+      </>
+      )
+    })
   };
 
-  //  const newName = testing()
 
   useEffect(() => {
     const listCities = async () => {
@@ -31,8 +40,6 @@ function Pets() {
         const data = await response.json();
         setState(data.data[0]);
         setNetworkStatus("resolved");
-        // console.log(state)
-        // testing();
       } catch (error) {
         setNetworkStatus("Item Fetch Error");
         console.log("Item data fetch fail!");
@@ -46,7 +53,7 @@ function Pets() {
       {networkStatus === "resolved" ? (
         <>
           <h1>hey!</h1>
-          {/* {newName} */}
+          {changeObjToArr(state)}
         </>
       ) : (
         <h1> Loading your new friend! </h1>
