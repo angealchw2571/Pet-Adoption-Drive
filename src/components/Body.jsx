@@ -14,7 +14,7 @@ function Body() {
         <Route path="/Hello" component={Hello} />
         <Route path="/adopt" component={Adopt} />
         <Route path="/about" component={About} />
-        <Route path="/findpet" component={FindPets} />
+        <Route path="/findpets" component={FindPets} />
         </div>
     )
 }
