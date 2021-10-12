@@ -26,8 +26,8 @@ function App() {
 
   return (
     <div>
-      <Header />
-      <Body />
+      <Header className="header"/>
+      <Body className="body"/>
     </div>
   );
 }

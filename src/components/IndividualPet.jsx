@@ -39,7 +39,7 @@ function Pets() {
       }
     };
     listCities();
-  }, []);
+  }, [params.i, url]);
 
   return (
     <div>

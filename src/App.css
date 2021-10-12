@@ -42,3 +42,9 @@
   margin: auto;
   padding: 20px;
 }
+
+.body {
+  justify-content: center;
+  text-align: center;
+  margin: center;
+}

@@ -1,3 +1,4 @@
+import { textAlign } from "@mui/system";
 import React from "react";
 import { useEffect, useState } from "react";
 import CitySelect from "./CitySelect";
@@ -34,7 +35,7 @@ function FindPets() {
   return (
       <>
     <div>
-      <h1> Find a pet rescue near you!</h1>
+      <h1 > Find a pet rescue near you!</h1>
       {networkStatus === "resolved" ? (
         <CitySelect data={state.data} setDisplay={setDisplay} />
       ) : (
