@@ -38,17 +38,17 @@ function FindPets() {
       {networkStatus === "resolved" ? (
         <CitySelect data={state.data} setDisplay={setDisplay} />
       ) : (
-        <h1> fetching </h1>
+        <h3>Please wait, I'm fetching the cutest dogs for you</h3>
       )}
     </div>
-    <div>
+    {/* <div>
         <h4>name: {display.name}</h4>
         <h4>id: {display.id}</h4>
-    </div>
+    </div> */}
     {display.id !== 0 ? (
         <PetSelector search={display}/>
       ) : (
-        <h1> Thank you for giving a second chance! </h1>
+        <h4> Thank you for giving these pets a second chance! </h4>
       )}
     </>
   );

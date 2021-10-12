@@ -3,14 +3,11 @@ import { Link } from "react-router-dom";
 
 function PetDisplay(props) {
   const arrData = props.data?.data;
-  console.log("arrData", arrData);
+  // console.log("arrData", arrData);
 
   
-
-
   return (
     <div>
-      <h1>pet display!</h1>
       <ul>{arrData !== undefined ? arrData.map((e, i) => {
       return (
         <li key={i}>
@@ -20,7 +17,8 @@ function PetDisplay(props) {
           </Link>
         </li>
       );
-    }) : <h1> null </h1>
+    }) : 
+    <h1>Sorry! We are unable to find pets from pet rescue... Try another centre!</h1>
 }
     </ul>
     </div>

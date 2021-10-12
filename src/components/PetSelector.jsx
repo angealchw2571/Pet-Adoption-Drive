@@ -20,7 +20,7 @@ function PetSelector(props) {
               },
             });
             const data = await response.json();
-            // console.log("before", data)
+            console.log("data from API", data)
             setState(data);
             setNetworkStatus("resolved");
             // console.log("internal", data)
@@ -37,7 +37,7 @@ function PetSelector(props) {
         <div>
              {networkStatus === "resolved" ? (
         <>
-            <h1> here you go!</h1>
+            <h1>Here you go!</h1>
             <PetDisplay data={state} id={searchID}/>
         </>
       ) : (
