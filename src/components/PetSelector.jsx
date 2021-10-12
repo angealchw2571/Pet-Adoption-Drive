@@ -1,6 +1,8 @@
 import React from 'react'
 import {useEffect, useState} from 'react'
 import PetDisplay from './PetDisplay';
+import TestingPage from './PetAlbumDisplay'
+
 
 function PetSelector(props) {
     const searchID = props.search.id
@@ -20,7 +22,7 @@ function PetSelector(props) {
               },
             });
             const data = await response.json();
-            console.log("data from API", data)
+            // console.log("data from API", data)
             setState(data);
             setNetworkStatus("resolved");
             // console.log("internal", data)
@@ -38,7 +40,8 @@ function PetSelector(props) {
              {networkStatus === "resolved" ? (
         <>
             <h1>Here you go!</h1>
-            <PetDisplay data={state} id={searchID}/>
+            <TestingPage data={state} id={searchID} />
+            {/* <PetDisplay data={state} id={searchID}/> */}
         </>
       ) : (
           <h1> {networkStatus}... Finding the best pets in the area</h1>
