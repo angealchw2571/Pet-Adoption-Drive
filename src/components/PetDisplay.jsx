@@ -18,7 +18,7 @@ function PetDisplay(props) {
         </li>
       );
     }) : 
-    <h1>Sorry! We are unable to find pets from pet rescue... Try another centre!</h1>
+    <h1>Sorry! We are unable to find pets from this pet rescue... Try another centre!</h1>
 }
     </ul>
     </div>

@@ -11,7 +11,7 @@ function PetSelector(props) {
 
     useEffect(() => {
         const listCities = async () => {
-          setNetworkStatus("pending");
+          setNetworkStatus("Pending");
           try {
             const response = await fetch(url, {
               headers: {
@@ -41,7 +41,7 @@ function PetSelector(props) {
             <PetDisplay data={state} id={searchID}/>
         </>
       ) : (
-          <h1> Hello! I am {networkStatus}</h1>
+          <h1> {networkStatus}... Finding the best pets in the area</h1>
       )}
         </div>
     )
