@@ -4,7 +4,7 @@ import PetDisplay from './PetDisplay';
 
 function PetSelector(props) {
     const searchID = props.search.id
-    console.log(searchID)
+    // console.log(searchID)
     const url =`https://api.rescuegroups.org/v5/public/orgs/${searchID}/animals/search/dogs?include=pictures,statuses,locations,videos&sort=%2Banimals.name&page=2&limit=250`;
     const [state, setState] = useState([]);
     const [networkStatus, setNetworkStatus] = useState("pending");
@@ -20,7 +20,7 @@ function PetSelector(props) {
               },
             });
             const data = await response.json();
-            console.log("before", data)
+            // console.log("before", data)
             setState(data);
             setNetworkStatus("resolved");
             // console.log("internal", data)

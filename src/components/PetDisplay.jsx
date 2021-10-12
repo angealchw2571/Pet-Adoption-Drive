@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function PetDisplay(props) {
   const arrData = props.data?.data;
-//   console.log("arrData", arrData);
+  console.log("arrData", arrData);
 
   
 

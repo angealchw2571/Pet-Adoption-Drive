@@ -43,7 +43,8 @@ function Pets() {
     <div>
       {networkStatus === "resolved" ? (
         <>
-          <h1>hey!</h1>
+          <h1>Hey! {state.attributes.name}!</h1>
+          <img src={state.attributes.pictureThumbnailUrl} alt=""/>
           {ChangeObjToArr(state)}
           <PetDetails state={newDataArr}/>
         </>

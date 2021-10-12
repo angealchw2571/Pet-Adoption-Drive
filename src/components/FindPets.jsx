@@ -48,7 +48,7 @@ function FindPets() {
     {display.id !== 0 ? (
         <PetSelector search={display}/>
       ) : (
-        <h1> fetching </h1>
+        <h1> Thank you for giving a second chance! </h1>
       )}
     </>
   );

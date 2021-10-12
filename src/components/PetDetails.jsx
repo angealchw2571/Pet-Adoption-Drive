@@ -1,28 +1,23 @@
-import React from 'react'
+import React from "react";
 
 function PetDetails(props) {
-    console.log("props", props.state)
+  // console.log("props", props.state);
 
-    const allDetails = props.state.map((element, index) => {
-      
-      return( 
-      <> 
-      <h4>{element.key} , {element.value}</h4>
-      </>
-      )
-    })
-
-    
-
-
-
+  const allDetails = props.state.map((element, index) => {
     return (
-        <>
-        <div>
-        {allDetails}
-        </div>
-        </>
-    )
+      <>
+        <h4 key={index}>
+          {element.key} , {element.value}
+        </h4>
+      </>
+    );
+  });
+
+  return (
+    <>
+      <div>{allDetails}</div>
+    </>
+  );
 }
 
-export default PetDetails
+export default PetDetails;
