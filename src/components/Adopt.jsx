@@ -12,27 +12,20 @@ const style = {
   px: 15,
 };
 
+const centeredStyle = {
+  justifyContent: "center",
+  alignItems: "center",
+  display: "flex",
+  alignSelf: "center",
+};
+
 function Adopt() {
   return (
     <>
-      <div
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          display: "flex",
-          alignSelf: "center",
-        }}
-      >
+      <div style={centeredStyle}>
         <h1>Why Adopt?</h1>
       </div>
-      <div
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          display: "flex",
-          alignSelf: "center",
-        }}
-      >
+      <div style={centeredStyle}>
         <h4> Extracted from humanesociety.org </h4>
       </div>
 

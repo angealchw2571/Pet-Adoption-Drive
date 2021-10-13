@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PetDataTable from './PetDataTable'
 
+
 function Pets() {
   const params = useParams();
-  console.log(params.i)
 
   const url = `https://api.rescuegroups.org/v5/public/orgs/${params.searchID}/animals/search/dogs?include=pictures,statuses,locations,videos&sort=%2Banimals.name&page=2&limit=250`;
   const [state, setState] = useState([]);
@@ -16,7 +16,7 @@ function Pets() {
     for (const [key, value] of Object.entries(e.attributes)) {
       newDataArr.push({ key, value });
     }
-    console.log(newDataArr);
+    // console.log(newDataArr);
   };
 
   useEffect(() => {
@@ -56,7 +56,12 @@ function Pets() {
           <PetDataTable internalData={state} arrData={newDataArr} />
         </>
       ) : (
-        <h4> Loading your new friend! </h4>
+        <h3 style={{
+          position: "absolute",
+          left: "50%",
+          top: "30%",
+          transform: "translate(-50%, -50%)",
+        }}> Loading your new friend! </h3>
       )}
     </div>
   );

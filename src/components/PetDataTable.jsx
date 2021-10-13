@@ -26,20 +26,22 @@ function PetDataTable(props) {
           justifyContent: "left",
           p: 5,
           flexDirection: "column",
+          
         }}
       >
         {anotherArr.map((element) => (
           <Box
             sx={{
               flexGrow: 0,
-              bgcolor: "#a5fafa",
-              p: 2,
+              bgcolor: "#dfffff",
+              p: 1,
               flexDirection: "column",
               textAlign: "center",
               
             }}
           >
-            <Typography paragraph>{element}</Typography>
+            <Typography sx={{ fontWeight: 'bold', letterSpacing: 2
+           }} paragraph>{element}</Typography>
           </Box>
         ))}
       </Box>
