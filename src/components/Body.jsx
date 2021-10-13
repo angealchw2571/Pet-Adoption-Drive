@@ -17,7 +17,6 @@ function Body() {
         <Route path="/about" component={About} />
         <Route exact path="/findpets" component={FindPets} />
         <Route path="/findpets/:name/:id/:i/:searchID" component={Pets} />
-
         </div>
     )
 }

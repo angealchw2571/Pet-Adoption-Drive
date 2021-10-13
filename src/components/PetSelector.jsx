@@ -1,6 +1,16 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import TestingPage from "./PetAlbumDisplay";
+import PetAlbumDisplay from "./PetAlbumDisplay";
+
+
+const centeredStyle ={
+  justifyContent: "center",
+  alignItems: "center",
+  display: "flex",
+  alignSelf: "center",
+  padding: 40
+
+}
 
 function PetSelector(props) {
   const searchID = props.search.id;
@@ -36,11 +46,10 @@ function PetSelector(props) {
     <div>
       {networkStatus === "resolved" ? (
         <>
-          <TestingPage data={state} id={searchID} />
-          {/* <PetDisplay data={state} id={searchID}/> */}
+          <PetAlbumDisplay data={state} id={searchID} />
         </>
       ) : (
-        <h4> {networkStatus}... Finding the best pets in the area</h4>
+        <h3 style={centeredStyle}> {networkStatus}... Finding the best pets in the area</h3>
       )}
     </div>
   );

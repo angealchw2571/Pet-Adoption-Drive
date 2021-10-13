@@ -32,9 +32,11 @@ function PetDataTable(props) {
           <Box
             sx={{
               flexGrow: 0,
-              bgcolor: "skyblue",
+              bgcolor: "#a5fafa",
               p: 2,
               flexDirection: "column",
+              textAlign: "center",
+              
             }}
           >
             <Typography paragraph>{element}</Typography>

@@ -16,9 +16,9 @@ code {
   display: flex;
   align-items: center;
   width: 100vw;
-  height: 50px;
+  height: 60px;
   padding: 0 20px;
-  background:azure;
+  background: rgb(208, 255, 255);;
 }
 
 .nav > * {
@@ -35,4 +35,10 @@ code {
   text-decoration: none;
   color: black;
   font-weight: bold;
+}
+
+.picture {
+  /* display: none */
+  /* opacity: 80%; */
+  transform: scale(-1, -1);
 }

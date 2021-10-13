@@ -1,8 +1,14 @@
-import { textAlign } from "@mui/system";
 import React from "react";
 import { useEffect, useState } from "react";
 import CitySelect from "./CitySelect";
 import PetSelector from "./PetSelector";
+
+  const centeredStyle ={
+    justifyContent: "center",
+    alignItems: "center",
+    display: "flex",
+    alignSelf: "center",
+  }
 
 function FindPets() {
   const url2 = "https://api.rescuegroups.org/v5/public/orgs/&limit=250";
@@ -34,12 +40,14 @@ function FindPets() {
 
   return (
       <>
-    <div>
-      <h1 > Find a pet rescue near you!</h1>
+    <div >
+      <h1 style={centeredStyle}> Find a pet rescue near you!</h1>
       {networkStatus === "resolved" ? (
+        <div style={centeredStyle}>
         <CitySelect data={state.data} setDisplay={setDisplay} />
+        </div >
       ) : (
-        <h4>Please wait, I'm fetching the cutest dogs for you</h4>
+        <h4 style={centeredStyle}>Please wait, I'm fetching the cutest dogs for you</h4>
       )}
     </div>
     {/* <div>
@@ -49,7 +57,7 @@ function FindPets() {
     {display.id !== 0 ? (
         <PetSelector search={display}/>
       ) : (
-        <h4> Thank you for giving these pets a second chance! </h4>
+        <h4 style = {centeredStyle}> Thank you for giving these pets a second chance! </h4>
       )}
     </>
   );

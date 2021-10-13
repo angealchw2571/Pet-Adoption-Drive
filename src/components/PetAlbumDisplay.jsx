@@ -12,11 +12,17 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 
+const centeredStyle ={
+  justifyContent: "center",
+  alignItems: "center",
+  display: "flex",
+  alignSelf: "center",
+  padding: 40
+}
+
 const theme = createTheme({
   typography: {
-    fontFamily: [
-      '"Segoe UI Emoji"',
-    ].join(','),
+    fontFamily: ['"Segoe UI Emoji"',].join(','),
   },
 });
 
@@ -46,7 +52,7 @@ export default function Album(props) {
             >
               <Container maxWidth="md">
                 <Typography
-                  component="h1"
+                  component="h2"
                   variant="h3"
                   align="center"
                   color="text.primary"
@@ -98,7 +104,7 @@ export default function Album(props) {
           </main>
         </ThemeProvider>
       ) : (
-        <h4>
+        <h4 style={centeredStyle}>
           Sorry! We are unable to find pets from this pet rescue... Try another
           centre!
         </h4>
