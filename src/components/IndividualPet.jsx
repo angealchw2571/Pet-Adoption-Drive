@@ -42,17 +42,21 @@ function Pets() {
   }, [params.i, url]);
 
   return (
-    <div>
+    <div >
       {networkStatus === "resolved" ? (
         <>
-          <h1>Hey! {state.attributes.name}!</h1>
-          <img src={state.attributes.pictureThumbnailUrl} alt=""/>
+        <div style={{justifyContent: "center", alignItems: "center", display: "flex", alignSelf: 'center' }}>
+          <h1>Hello! My name is {state.attributes.name}!</h1>
+          </div>
+          <div style={{justifyContent: "center", alignItems: "center", display: "flex", alignSelf: 'center' }}>
+          <img src={state.attributes.pictureThumbnailUrl} alt="" style={{justifyContent: "center", alignItems: "center", display: "flex", alignSelf: 'center' }} />
+          </div>
           {ChangeObjToArr(state)}
           {/* <PetDetails state={newDataArr} data={state}/> */}
-          <PetDataTable internalData={state} arrData={newDataArr}/>
+          <PetDataTable internalData={state} arrData={newDataArr} />
         </>
       ) : (
-        <h1> Loading your new friend! </h1>
+        <h4> Loading your new friend! </h4>
       )}
     </div>
   );

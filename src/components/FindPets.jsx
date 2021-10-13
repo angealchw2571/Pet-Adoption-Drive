@@ -39,7 +39,7 @@ function FindPets() {
       {networkStatus === "resolved" ? (
         <CitySelect data={state.data} setDisplay={setDisplay} />
       ) : (
-        <h3>Please wait, I'm fetching the cutest dogs for you</h3>
+        <h4>Please wait, I'm fetching the cutest dogs for you</h4>
       )}
     </div>
     {/* <div>

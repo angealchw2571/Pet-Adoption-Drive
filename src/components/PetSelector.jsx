@@ -40,7 +40,7 @@ function PetSelector(props) {
           {/* <PetDisplay data={state} id={searchID}/> */}
         </>
       ) : (
-        <h1> {networkStatus}... Finding the best pets in the area</h1>
+        <h4> {networkStatus}... Finding the best pets in the area</h4>
       )}
     </div>
   );

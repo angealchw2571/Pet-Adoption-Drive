@@ -98,10 +98,10 @@ export default function Album(props) {
           </main>
         </ThemeProvider>
       ) : (
-        <h1>
+        <h4>
           Sorry! We are unable to find pets from this pet rescue... Try another
           centre!
-        </h1>
+        </h4>
       )}
     </div>
   );
