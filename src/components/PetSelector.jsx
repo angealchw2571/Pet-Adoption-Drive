@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import PetAlbumDisplay from "./PetAlbumDisplay";
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 const centeredStyle ={
@@ -45,11 +46,12 @@ function PetSelector(props) {
   return (
     <div>
       {networkStatus === "resolved" ? (
-        <>
           <PetAlbumDisplay data={state} id={searchID} />
-        </>
       ) : (
-        <h3 style={centeredStyle}> {networkStatus}... Finding the best pets in the area</h3>
+        <div style={centeredStyle}>
+        <CircularProgress color="success" sx= {{p: 2, justifyContent: "center",}} />
+        <h3> {networkStatus}... Finding the best pets in the area</h3>
+        </div>
       )}
     </div>
   );

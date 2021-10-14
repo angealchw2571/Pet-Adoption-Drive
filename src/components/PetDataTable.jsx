@@ -26,7 +26,6 @@ function PetDataTable(props) {
           justifyContent: "left",
           p: 5,
           flexDirection: "column",
-          
         }}
       >
         {anotherArr.map((element) => (
@@ -37,11 +36,19 @@ function PetDataTable(props) {
               p: 1,
               flexDirection: "column",
               textAlign: "center",
-              
             }}
           >
-            <Typography sx={{ fontWeight: 'bold', letterSpacing: 2
-           }} paragraph>{element}</Typography>
+            <Typography
+              sx={{
+                fontWeight: "bold",
+                letterSpacing: 1,
+                fontFamily: "Shadows Into Light",
+                fontSize: 25,
+              }}
+              paragraph
+            >
+              {element}
+            </Typography>
           </Box>
         ))}
       </Box>

@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Link } from "react-router-dom";
+import MoodBadIcon from '@mui/icons-material/MoodBad';
 
 const centeredStyle ={
   justifyContent: "center",
@@ -22,7 +23,9 @@ const centeredStyle ={
 
 const theme = createTheme({
   typography: {
-    fontFamily: ['"Segoe UI Emoji"',].join(','),
+    // fontFamily: ['"Segoe UI Emoji"',].join(','),
+    // fontFamily: "Shadows Into Light",
+
   },
 });
 
@@ -104,10 +107,13 @@ export default function Album(props) {
           </main>
         </ThemeProvider>
       ) : (
+        <>
         <h4 style={centeredStyle}>
+        <MoodBadIcon sx= {{p: 1, justifyContent: "center",}}/>
           Sorry! We are unable to find pets from this pet rescue... Try another
           centre!
         </h4>
+        </>
       )}
     </div>
   );
