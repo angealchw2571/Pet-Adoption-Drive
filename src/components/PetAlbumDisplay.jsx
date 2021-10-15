@@ -44,7 +44,6 @@ export default function Album(props) {
     <div>
       {props.data.data !== undefined ? (
         <ThemeProvider theme={theme}>
-          <CssBaseline />
           <main>
             <Box
               sx={{

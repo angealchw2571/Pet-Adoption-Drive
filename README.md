@@ -14,10 +14,13 @@ I would like to create an interactive app that would be simple to use, and easy 
 
 Technology used to build this project.
 
-- React
+- Javascript
+- HTML
+- ReactJS
 - React Router
 - CSS
 - Material UI
+- APIs: https://api.rescuegroups.org/v5/public/docs
 
 
 
