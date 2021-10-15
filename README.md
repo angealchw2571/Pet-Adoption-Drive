@@ -37,16 +37,16 @@ Checkboxes
 
 
 ## Planning and Development Process
-TBC
+Nesting different components together 
 
 
 
 ## Problems
-
+Most of the problems faced were related to the API call, as the data returned were disorganised and some of the values were left blank. This created problems as I coded for each individually returned pet. 
 
 
 ## Unsolved Problems
-
+I was not able to do the checkbox and result to be instantly projected on the same page. The struggle was to filter the returned data. 
 
 ## APIs Used
 https://api.rescuegroups.org/v5/public/docs

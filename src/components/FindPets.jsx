@@ -8,6 +8,7 @@ import PetSelector from "./PetSelector";
     alignItems: "center",
     display: "flex",
     alignSelf: "center",
+    padding: 8,
   }
 
 function FindPets() {
@@ -43,8 +44,8 @@ function FindPets() {
     <div >
       <h1 style={centeredStyle}> Find a pet rescue near you!</h1>
       {networkStatus === "resolved" ? (
-        <div style={centeredStyle}>
-        <CitySelect data={state.data} setDisplay={setDisplay} />
+        <div style={centeredStyle} >
+        <CitySelect data={state.data} setDisplay={setDisplay}  />
         </div >
       ) : (
         <h4 style={centeredStyle}>Please wait, I'm fetching the cutest dogs for you</h4>
