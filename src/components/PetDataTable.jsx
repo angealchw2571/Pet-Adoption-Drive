@@ -28,8 +28,8 @@ function PetDataTable(props) {
           flexDirection: "column",
         }}
       >
-        {anotherArr.map((element) => (
-          <Box
+        {anotherArr.map((element, index) => (
+          <Box key={index}
             sx={{
               flexGrow: 0,
               bgcolor: "#dfffff",
